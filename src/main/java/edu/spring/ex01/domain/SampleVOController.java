@@ -13,7 +13,7 @@ public class SampleVOController {
 	
 	@GetMapping("/product1")
 	public String product1(Model model, String name, int price) {
-		LOGGER.info("product1() È£Ãâ");
+		LOGGER.info("product1() í˜¸ì¶œ");
 		ProductVO vo = new ProductVO(name, price);
 		model.addAttribute("vo", vo);
 		
@@ -21,8 +21,8 @@ public class SampleVOController {
 	}
 	
 	@GetMapping("/product2")
-	public String product2(@ModelAttribute(name="vo") ProductVO vo) { // ProductVO vo - beanÀÇ ¿ªÇÒ
-		LOGGER.info("product2() È£Ãâ");
+	public String product2(@ModelAttribute(name="vo") ProductVO vo) { // ProductVO vo - bean ì—­í• 
+		LOGGER.info("product2() í˜¸ì¶œ");
 		LOGGER.info(vo.toString());
 		return "product-result";
 	}

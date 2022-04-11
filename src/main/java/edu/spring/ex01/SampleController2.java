@@ -13,9 +13,9 @@ public class SampleController2 {
 	@GetMapping("/test1")
 	public String test1(Model model, String username) {
 		// username : request.getParameter("username");
-		LOGGER.info("test1() È£Ãâ : username = " + username);		
-		// Model : view¿¡ µ¥ÀÌÅÍ¸¦ Àü¼ÛÇÏ±â À§ÇÑ °´Ã¼
-		// forwarding ¹æ½Ä°ú µ¿ÀÏ
+		LOGGER.info("test1() í˜¸ì¶œ : username = " + username);		
+		// Model : viewì— ë°ì´í„°ë¥¼ ì „ì†¡í•˜ê¸° ìœ„í•œ ê°ì²´
+		// forwarding ë°©ì‹ê³¼ ë™ì¼
 		model.addAttribute("username", username);
 		
 		return "param-test";
@@ -23,8 +23,8 @@ public class SampleController2 {
 	
 	@GetMapping("/test2")
 	public String test2(Model model, String username, int age) {
-		// springÀÇ ÀåÁ¡ : parsingÀÌ ÇÊ¿ä ¾øÀ½!
-		LOGGER.info("test2() È£Ãâ");
+		// springì˜ ì¥ì  : parsingì´ í•„ìš” ì—†ìŒ!
+		LOGGER.info("test2() í˜¸ì¶œ");
 		LOGGER.info("username = " + username);
 		LOGGER.info("age = " + age);
 		username = username.toUpperCase();

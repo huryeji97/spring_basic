@@ -12,8 +12,8 @@ public class SampleController3 {
 	
 	@GetMapping("/test3")
 	public String test3(@ModelAttribute(name="username") String username) {
-		// @ModelAttribute : ¿äÃ»¹ŞÀº µ¥ÀÌÅÍ(username)À» view¿¡ Àü¼Û
-		// name="username" : model.addAttribute() Å°°ªÀ» ÀÇ¹Ì
+		// @ModelAttribute : ìš”ì²­ë°›ì€ ë°ì´í„°(username)ì„ viewì— ì „ì†¡
+		// name="username" : model.addAttribute() í‚¤ê°’ì„ ì˜ë¯¸
 		return "param-test";
 	}
 	

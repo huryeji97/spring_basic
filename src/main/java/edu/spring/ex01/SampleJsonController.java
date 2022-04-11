@@ -14,22 +14,22 @@ public class SampleJsonController {
 	
 	@GetMapping("/json1")
 	public String json1() {
-		LOGGER.info("json1() È£Ãâ");
-		return "sample1"; // jspÈ£Ãâ
+		LOGGER.info("json1() í˜¸ì¶œ");
+		return "sample1"; // jspí˜¸ì¶œ
 	}
 	
-	// @ResponseBody : ÇÔ¼öÀÇ ¸®ÅÏÀ» µ¥ÀÌÅÍÇü½Ä(json)À¸·Î º¯°æÇÏ´Â ¾î³ëÅ×ÀÌ¼Ç
+	// @ResponseBody : í•¨ìˆ˜ì˜ ë¦¬í„´ì„ ë°ì´í„°í˜•ì‹(json)ìœ¼ë¡œ ë³€ê²½í•˜ëŠ” ì–´ë…¸í…Œì´ì…˜
 	@GetMapping("/json2")
 	@ResponseBody
 	public String json2() {
-		LOGGER.info("json2() È£Ãâ");
+		LOGGER.info("json2() í˜¸ì¶œ");
 		return "Hello, Spring!";
 	}
 	
 	@GetMapping("/json3")
 	@ResponseBody
 	public ProductVO json3() {
-		LOGGER.info("json3() È£Ãâ");
-		return new ProductVO("¾ß±¸°ø", 10000);
+		LOGGER.info("json3() í˜¸ì¶œ");
+		return new ProductVO("ì•¼êµ¬ê³µ", 10000);
 	}
 }

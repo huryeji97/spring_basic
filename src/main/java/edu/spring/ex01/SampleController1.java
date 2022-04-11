@@ -8,30 +8,30 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 //POJO : Plain Old Java Object
 @Controller
-// servlet-context.xml ÆÄÀÏ¿¡¼­
-// component-scanningÀÌ ´ë»óÀ¸·Î ¸¸µé¾îÁÖ´Â ¾î³ëÅ×ÀÌ¼Ç
-// @Component ¾î³ëÅ×ÀÌ¼ÇÀ» »ç¿ëÇØµµ µÊ
+// servlet-context.xml íŒŒì¼ì—ì„œ
+// component-scanningì´ ëŒ€ìƒìœ¼ë¡œ ë§Œë“¤ì–´ì£¼ëŠ” ì–´ë…¸í…Œì´ì…˜
+// @Component ì–´ë…¸í…Œì´ì…˜ì„ ì‚¬ìš©í•´ë„ ë¨
 public class SampleController1 {
-	// ½ºÇÁ¸µ ÇÁ·¹ÀÓ¿öÅ©¿¡¼­ ·Î±×¸¦ »ç¿ëÇÏ±â À§ÇÑ °´Ã¼
+	// ìŠ¤í”„ë§ í”„ë ˆì„ì›Œí¬ì—ì„œ ë¡œê·¸ë¥¼ ì‚¬ìš©í•˜ê¸° ìœ„í•œ ê°ì²´
 	private static final Logger LOGGER = LoggerFactory.getLogger(SampleController1.class);
 	
 	@RequestMapping(value = "/sample1", method=RequestMethod.GET)
-	// @RequestMapping : ÄÁÆ®·Ñ·¯ÀÇ URL ¸ÅÇÎ°ú ¸Ş¼Òµå(GET/POST/PUT/DELETE)¸¦ ¼³Á¤
-	// value = URL °æ·Î
-	// method = ¿äÃ» ¹æ½Ä ¼³Á¤(GET, POST, PUT, DELETE)
-	// method ¼Ó¼ºÀ» »ı·«ÇÏ¸é GET/POST ¸ğµÎ Ã³¸®°¡´É
-	// short cut ±â´É : @GetMapping, @PostMapping, ...
+	// @RequestMapping : ì»¨íŠ¸ë¡¤ëŸ¬ì˜ URL ë§¤í•‘ê³¼ ë©”ì†Œë“œ(GET/POST/PUT/DELETE)ë¥¼ ì„¤ì •
+	// value = URL ê²½ë¡œ
+	// method = ìš”ì²­ ë°©ì‹ ì„¤ì •(GET, POST, PUT, DELETE)
+	// method ì†ì„±ì„ ìƒëµí•˜ë©´ GET/POST ëª¨ë‘ ì²˜ë¦¬ê°€ëŠ¥
+	// short cut ê¸°ëŠ¥ : @GetMapping, @PostMapping, ...
 	public String sample1() {
-		LOGGER.info("sample1() È£Ãâ");
-		return "sample1"; // jsp °æ·Î ¹× ÀÌ¸§
+		LOGGER.info("sample1() í˜¸ì¶œ");
+		return "sample1"; // jsp ê²½ë¡œ ë° ì´ë¦„
 		// WEB-INF/views/sample1.jsp
-		// * ÄÁÆ®·Ñ·¯ ¸Ş¼Òµå return °ªÀÇ ÀÇ¹Ì
-		// ViewResolver ¿¡°Ô ½ÇÁ¦ view¸¦ °áÁ¤ÇÏµµ·Ï(Ã£µµ·Ï) ¿äÃ»
-		// return Å¸ÀÔÀÌ voidÀÎ °æ¿ì´Â URL ¸ÅÇÎÀ» ÅëÇØ¼­ view¸¦ Ã£À½
+		// * ì»¨íŠ¸ë¡¤ëŸ¬ ë©”ì†Œë“œ return ê°’ì˜ ì˜ë¯¸
+		// ViewResolver ì—ê²Œ ì‹¤ì œ viewë¥¼ ê²°ì •í•˜ë„ë¡(ì°¾ë„ë¡) ìš”ì²­
+		// return íƒ€ì…ì´ voidì¸ ê²½ìš°ëŠ” URL ë§¤í•‘ì„ í†µí•´ì„œ viewë¥¼ ì°¾ìŒ
 	}
 	
 	@RequestMapping(value="/sample2")
 	public void sample2() {
-		LOGGER.info("sample2() È£Ãâ");
-	} // void´Â ¾Ë¾Æ¼­ mapping ÇÑ´Ù.
+		LOGGER.info("sample2() í˜¸ì¶œ");
+	} // voidëŠ” ì•Œì•„ì„œ mapping í•œë‹¤.
 }

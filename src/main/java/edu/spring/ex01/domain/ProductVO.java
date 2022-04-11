@@ -4,7 +4,7 @@ public class ProductVO {
 	private String name;
 	private int price;
 	
-	// ±âº»»ı¼ºÀÚ
+	// ê¸°ì´ˆìƒì„±ì
 	public ProductVO() { }
 
 	public ProductVO(String name, int price) {
